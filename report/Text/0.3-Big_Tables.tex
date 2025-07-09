@@ -1,0 +1,48 @@
+
+\begin{table*}
+    \caption{Mean Average Precision per class score matrix on $FC\_A$}
+    \label{tab:Map per class score}
+    \centering
+        \begin{tabular}{lccl}
+        \hline
+         & \multicolumn{1}{l}{Faster RCNN - Swin T} & \multicolumn{1}{l}{Faster RCNN - Inception-ResNet-v2} \\ \hline
+        Text       & 0.44 & 0.25   \\
+        Arrow      & 0.41 & 0.36   \\
+        Connection & 0.11 & 0.00   \\
+        Data       & 0.75 & 0.46   \\
+        Decison    & 0.70 & 0.54   \\
+        Process    & 0.63 & 0.61   \\
+        Terminator & 0.85 & 0.07   \\ \hline
+        \end{tabular}
+\end{table*}
+
+\begin{table*}
+    \caption{Mean Average Recall per class score matrix on $FC\_A$}
+    \label{tab:Mar per class score}
+    \centering
+        \begin{tabular}{lccl}
+        \hline
+         & \multicolumn{1}{l}{Faster RCNN - Swin T} & \multicolumn{1}{l}{Faster RCNN - Inception-ResNet-v2} \\ \hline
+        Text       & 0.80 & 0.69   \\
+        Arrow      & 0.81 & 0.74   \\
+        Connection & 0.31 & 0.05   \\
+        Data       & 0.85 & 0.67   \\
+        Decison    & 0.84 & 0.72   \\
+        Process    & 0.75 & 0.79   \\
+        Terminator & 0.88 & 0.54   \\ \hline
+        \end{tabular}
+\end{table*}
+
+\begin{table*}
+    \caption{Confusion Matrix on $FC\_A$}
+    \centering
+    \label{tab:Confusion matrix}
+        \begin{tabular}{lccl}
+        \hline
+         & \multicolumn{1}{l}{Faster RCNN - Swin T} & \multicolumn{1}{l}{Faster RCNN - Inception-ResNet-v2}  \\ \hline
+        Precision (MAP) & 0.57 & 0.34   \\
+        Recall (MAR)    & 0.77 & 0.62   \\
+        F1 Score        & 0.66 & 0.44   \\ \hline
+        \end{tabular}   
+\end{table*}
+

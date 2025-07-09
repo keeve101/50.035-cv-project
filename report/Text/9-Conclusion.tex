@@ -1,0 +1,3 @@
+\section{Conclusion}
+
+This report aimed to improve the performance of an existing model by Bhushan and Lee to detect shapes in block diagrams. Our proposed model replaced the Inception-ResNet-v2 backbone model with a Swin transformer and a YOLOv5 model in the hopes of scoring a better F-measure, Precision and Recall score.  After testing with our own generated dataset, only the YOLOv5 model (98.4) yielded better results (96.24). This could be attributed to the one step interence in YOLOv5 compared to the two-step in Faster R-CNN. Although performing better, recognizing block diagrams and understanding the corresponding structural semantics with an end to-end model is still a hurdle.

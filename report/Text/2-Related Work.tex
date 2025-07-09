@@ -1,0 +1,27 @@
+\section{Related Work}
+% Delete the text and write your Theory/ Background Information here:
+%------------------------------------
+
+\subsection{Block Diagram Recognition}
+Most prior studies of machine-generated block diagram recognition took place after the CLEF-IP in 2011, which was held by the Information Retrieval Facility (IFR) and released a public machine-generated flowchart dataset \cite{9795274}. Adams \cite{adams_2005_electronic} extracted the entire block diagram by analysing the connected components in images, before identifying specific structures using manually chosen features. This however would result in reduced accuracy when detecting incomplete (dotted lines) or broken edges. Mörzinger et al. \cite{mrzinger_2012_visual} first separated the diagram and text before studying the visual features of a structure, going to the pixel level.
+
+For handwritten block diagrams, Julca-Aguilar and Hirata\cite{DBLP:journals/corr/abs-1712-04833} employed the Faster R-CNN for symbol detection. Results show that Faster R-CNN was effective on both publicly available flowchart and mathematical expression (CROHME-2016) datasets. Schäfer \cite{bernhardschfer_2021_arrow} built the first deep learning system for joint structure and symbol recognition in handwritten diagrams using Arrow R-CNN. 
+
+On a similar vein, Farahani and colleagues \cite{alivasheghanifarahani_2023_automatic} reviewed recent automatic chart image understanding techniques more focused on charts (bar chart, pie chart, scatter plot). Shreyanshu and Lee \cite{bhushan-lee-2022-block} proposed a new framework for the summarization of block diagram images, called “Blosum”. The “Blosum” architecture would decompose the images into possible sets of triplets, capturing the relationships between components. 
+
+
+\subsection{Transformer Architecture}
+Transformer architectures have revolutionized computer vision tasks in recent years, with models like the Vision Transformer (ViT) and its derivatives achieving state-of-the-art performance across various domains. Unlike traditional convolutional neural networks (CNNs), which process spatially local information using kernels, transformers utilize self-attention mechanisms to capture global context within an image. This makes them particularly suited for recognizing structural relationships in block diagrams, where global context plays a vital role in understanding component interactions and spatial dependencies.
+
+The Swin Transformer \cite{liu_2021_swin}, a hierarchical vision transformer, was introduced as a means to overcome the computational challenges associated with traditional transformer models. By adopting a shifted window mechanism, Swin Transformer processes images in smaller, non-overlapping windows while allowing information flow between adjacent windows. This approach ensures a fine balance between computational efficiency and the ability to model long-range dependencies. Such a capability is critical for block diagram recognition, where short and nearly parallel line segments often require an understanding of their global positioning within the diagram.
+
+The rationale behind exploring the Swin Transformer for block diagram recognition lies in its ability to handle hierarchical representations effectively. Additionally, its adaptability to irregular shapes and non-uniform layouts aligns well with the inherent variability in block diagram structures.
+
+ 
+
+ 
+
+ 
+
+
+

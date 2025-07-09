@@ -1,0 +1,25 @@
+\section{Implementation}
+% Delete the text and write your Discussion here:
+%------------------------------------
+\subsection{Testing}
+We trained on the test set of the computerized block diagrams, which had 300 images, and evaluated on FC-A, which is the handwritten dataset. This is to test out the generalizability of our models, and is also inline with testing done by the paper Blosum. 
+
+\subsection{Evaluation Metrics}
+For our evaluation, we calculated the F1-Score, Mean Average Precision (MAP) and Mean Average Recall (MAR). We set IOU=0.7, similar to the paper. 
+
+These are the results we obtained are summarised in \cref{tab:Map per class score}, \cref{tab:Mar per class score} and \cref{tab:Confusion matrix}.
+
+
+
+
+\subsection{Results}
+The overall MAP of the model with Swin-Transformer backbone was higher than that of with the Inception-ResNet-v2 backbone, even though the Inception-ResNet-v2 managed to achieve a slightly higher MAP on the test set of the computerized block diagrams. This shows that the Swin-Transformer is able to generalize better. In addition, the overall training duration of the Swin-Transformer was twice as fast as that of the Inception-ResNet-v2. 
+
+For both Inception and Swin-T models, the precision and recall for "Connection" are the lowest. This could be due to having less data for the "Connection" shapes, and we might not have ran enough epochs on both models to capture enough information. 
+
+The MAP for the models are generally quite low as we only ran 50 epochs on both. This was due to time and resource constraints. 
+
+Overall, the model with Swin-T as the backbone performed better.
+
+For the data augmentation, we ran it 50 sets of it with 20 epochs on the Swin Transformer. Results was better by 0.02 MAP, and we can extrapolate this to 50 epochs to predict that the results would be better. 
+
